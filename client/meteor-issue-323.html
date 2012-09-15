@@ -1,5 +1,4 @@
 <head>
-  <script src="//www.youtube.com/player_api" id="youtube-api"></script>
   <title>zapzapzap</title>
 </head>
 
@@ -7,12 +6,9 @@
   {{> results}}
 </body>
 
-<template name="search">
-  <input type="text" value="search" />
-  <input type="button" value="search" id="search"/>
-</template>
-
 <template name="results">
+  <input type="button" value="foo" id="foo">
+  <input type="button" value="bar" id="bar">
   <div class="up">
     {{#each videos_up}}
       {{> player}}
@@ -22,9 +18,7 @@
 
 <template name="player">
   <p>{{title}}</p>
-  <span data-vid="{{vid}}" data-id="{{_id}}">
-    {{#constant}}
-      <span id="{{_id}}" class="player"></span>
-    {{/constant}}
-  </span>
+  {{#constant}}
+    <span id="{{_id}}"></span>
+  {{/constant}}
 </template>
