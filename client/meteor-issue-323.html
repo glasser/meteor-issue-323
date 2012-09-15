@@ -1,5 +1,5 @@
 <head>
-  <title>zapzapzap</title>
+  <title>Meteor Issue 323</title>
 </head>
 
 <body>
@@ -8,17 +8,10 @@
 
 <template name="results">
   <input type="button" value="foo" id="foo">
-  <input type="button" value="bar" id="bar">
-  <div class="up">
-    {{#each videos_up}}
-      {{> player}}
-    {{/each}}
+  <div>
+    <p>preserved P: {{query}}</p>
+    {{#constant}}
+      <span>constant SPAN</span>
+    {{/constant}}
   </div>
-</template>
-
-<template name="player">
-  <p>{{title}}</p>
-  {{#constant}}
-    <span id="{{_id}}"></span>
-  {{/constant}}
 </template>
