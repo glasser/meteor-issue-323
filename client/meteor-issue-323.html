@@ -8,8 +8,5 @@
 
 <template name="results">
   <input type="button" value="foo" id="foo">
-  <!-- The space on the next line at the beginning of the #constant is
-       necessary for the exception to be raised! -->
-  <div><p>preserved P:{{query}}</p>{{#constant}} <span>constant SPAN</span>{{/constant}}
-  </div>
+  <div><p>preserved P:{{query}}</p>{{#constant}}text{{/constant}}</div>
 </template>
